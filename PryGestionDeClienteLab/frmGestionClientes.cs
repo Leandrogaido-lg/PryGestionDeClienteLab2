@@ -38,18 +38,36 @@ namespace PryGestionDeClienteLab
 
             if (IND < Clientes.Length)
             {
+                Int32 i = 0;
 
-                Clientes[IND].Codigo = Convert.ToInt32(txtCodigo.Text);
-                Clientes[IND].Usuario = txtUsuario.Text;
-                Clientes[IND].Deuda = Convert.ToDecimal(txtDeuda.Text);
-                Clientes[IND].Limite = Convert.ToDecimal(txtLimiteCredito.Text);
-                IND++;
+                while (Clientes[IND].Codigo != Convert.ToInt32(txtCodigo.Text) && i < IND)
+                {
+                    i++;
+                }
+
+                if(i == IND)
+                {
+
+                    Clientes[IND].Codigo = Convert.ToInt32(txtCodigo.Text);
+                    Clientes[IND].Usuario = txtUsuario.Text;
+                    Clientes[IND].Deuda = Convert.ToDecimal(txtDeuda.Text);
+                    Clientes[IND].Limite = Convert.ToDecimal(txtLimiteCredito.Text);
+                    IND++;
+                    MessageBox.Show("Los Datos se cargaron correctamente");
+                    txtCodigo.Text = "";
+                    txtUsuario.Text = "";
+                    txtDeuda.Text = "";
+                    txtLimiteCredito.Text = "";
+
+                }
+
+                else
+                {
+                    MessageBox.Show("El Codigo existe, ingrese otro");
+                    txtCodigo.Text = "";
+                }
                 Listar();
-                MessageBox.Show("Los Datos se cargaron correctamente");
-                txtCodigo.Text = "";
-                txtUsuario.Text = "";
-                txtDeuda.Text = "";
-                txtLimiteCredito.Text = "";
+
             }
                 else
             {
@@ -74,11 +92,15 @@ namespace PryGestionDeClienteLab
                 Total = Total + Clientes[i].Deuda;
             }
             txtTotalDeuda.Text = Total.ToString();
+
+
         }
 
         private void frmGestionClientes_Load(object sender, EventArgs e)
         {
             btnCargar.Enabled = false;
+            Precarga();
+            Listar();
         }
 
         private void comprobar()
@@ -112,6 +134,48 @@ namespace PryGestionDeClienteLab
         private void txtLimiteCredito_TextChanged(object sender, EventArgs e)
         {
             comprobar();
+        }
+
+
+
+
+        private void Precarga()
+
+        {
+            Clientes[IND].Codigo = 10;
+            Clientes[IND].Usuario = "Guada";
+            Clientes[IND].Deuda = 5000;
+            Clientes[IND].Limite = 10000;
+            IND++;
+
+            Clientes[IND].Codigo = 20;
+            Clientes[IND].Usuario = "marta";
+            Clientes[IND].Deuda = 2000;
+            Clientes[IND].Limite = 10000;
+            IND++;
+
+            Clientes[IND].Codigo = 30;
+            Clientes[IND].Usuario = "Sofia";
+            Clientes[IND].Deuda = 4000;
+            Clientes[IND].Limite = 10000;
+            IND++;
+        }
+
+        private void btnListaDeudores_Click(object sender, EventArgs e)
+        {
+            Decimal Total = 0;
+            dgvClientes.Rows.Clear();
+            for (Int32 i = 0; i < IND; i++)
+            {
+                if(Clientes[i].Deuda > 0)
+                {
+
+                    dgvClientes.Rows.Add(Clientes[i].Codigo, Clientes[i].Usuario, Clientes[i].Limite, Clientes[i].Deuda);
+                    Total = Total + Clientes[i].Deuda;
+                }
+                
+            }
+            txtTotalDeuda.Text = Total.ToString();
         }
     }
 }
