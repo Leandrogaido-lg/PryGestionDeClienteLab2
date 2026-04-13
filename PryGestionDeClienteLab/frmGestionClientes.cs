@@ -36,23 +36,23 @@ namespace PryGestionDeClienteLab
         private void btnCargar_Click(object sender, EventArgs e)
         {
 
-            if (IND < Clientes.Length)
+            if (clsVector.IND < clsVector.Clientes.Length)
             {
                 Int32 i = 0;
 
-                while (Clientes[IND].Codigo != Convert.ToInt32(txtCodigo.Text) && i < IND)
+                while (clsVector.Clientes[IND].Codigo != Convert.ToInt32(txtCodigo.Text) && i < IND)
                 {
                     i++;
                 }
 
-                if(i == IND)
+                if(i == clsVector.IND)
                 {
 
-                    Clientes[IND].Codigo = Convert.ToInt32(txtCodigo.Text);
-                    Clientes[IND].Usuario = txtUsuario.Text;
-                    Clientes[IND].Deuda = Convert.ToDecimal(txtDeuda.Text);
-                    Clientes[IND].Limite = Convert.ToDecimal(txtLimiteCredito.Text);
-                    IND++;
+                    clsVector.Clientes[IND].Codigo = Convert.ToInt32(txtCodigo.Text);
+                    clsVector.Clientes[IND].Usuario = txtUsuario.Text;
+                    clsVector.Clientes[IND].Deuda = Convert.ToDecimal(txtDeuda.Text);
+                    clsVector.Clientes[IND].Limite = Convert.ToDecimal(txtLimiteCredito.Text);
+                    clsVector.IND++;
                     MessageBox.Show("Los Datos se cargaron correctamente");
                     txtCodigo.Text = "";
                     txtUsuario.Text = "";
@@ -85,11 +85,11 @@ namespace PryGestionDeClienteLab
         {
             Decimal Total = 0;
             dgvClientes.Rows.Clear();
-            for (Int32 i = 0; i < IND; i++)
+            for (Int32 i = 0; i < clsVector.IND; i++)
             {
 
-                dgvClientes.Rows.Add(Clientes[i].Codigo, Clientes[i].Usuario, Clientes[i].Limite, Clientes[i].Deuda);
-                Total = Total + Clientes[i].Deuda;
+                dgvClientes.Rows.Add(clsVector.Clientes[i].Codigo, clsVector.Clientes[i].Usuario, clsVector.Clientes[i].Limite, clsVector.Clientes[i].Deuda);
+                Total = Total + clsVector.Clientes[i].Deuda;
             }
             txtTotalDeuda.Text = Total.ToString();
 
@@ -142,36 +142,36 @@ namespace PryGestionDeClienteLab
         private void Precarga()
 
         {
-            Clientes[IND].Codigo = 10;
-            Clientes[IND].Usuario = "Guada";
-            Clientes[IND].Deuda = 5000;
-            Clientes[IND].Limite = 10000;
-            IND++;
+            clsVector.Clientes[IND].Codigo = 10;
+            clsVector.Clientes[IND].Usuario = "Guada";
+            clsVector.Clientes[IND].Deuda = 5000;
+            clsVector.Clientes[IND].Limite = 10000;
+            clsVector.IND++;
 
-            Clientes[IND].Codigo = 20;
-            Clientes[IND].Usuario = "marta";
-            Clientes[IND].Deuda = 2000;
-            Clientes[IND].Limite = 10000;
-            IND++;
+            clsVector.Clientes[IND].Codigo = 20;
+            clsVector.Clientes[IND].Usuario = "marta";
+            clsVector.Clientes[IND].Deuda = 2000;
+            clsVector.Clientes[IND].Limite = 10000;
+            clsVector.IND++;
 
-            Clientes[IND].Codigo = 30;
-            Clientes[IND].Usuario = "Sofia";
-            Clientes[IND].Deuda = 4000;
-            Clientes[IND].Limite = 10000;
-            IND++;
+            clsVector.Clientes[IND].Codigo = 30;
+            clsVector.Clientes[IND].Usuario = "Sofia";
+            clsVector.Clientes[IND].Deuda = 4000;
+            clsVector.Clientes[IND].Limite = 10000;
+            clsVector.IND++;
         }
 
         private void btnListaDeudores_Click(object sender, EventArgs e)
         {
             Decimal Total = 0;
             dgvClientes.Rows.Clear();
-            for (Int32 i = 0; i < IND; i++)
+            for (Int32 i = 0; i < clsVector.IND; i++)
             {
-                if(Clientes[i].Deuda > 0)
+                if(clsVector. Clientes[i].Deuda > 0)
                 {
 
-                    dgvClientes.Rows.Add(Clientes[i].Codigo, Clientes[i].Usuario, Clientes[i].Limite, Clientes[i].Deuda);
-                    Total = Total + Clientes[i].Deuda;
+                    dgvClientes.Rows.Add(clsVector.Clientes[i].Codigo, clsVector.Clientes[i].Usuario, clsVector.Clientes[i].Limite, clsVector.Clientes[i].Deuda);
+                    Total = Total + clsVector.Clientes[i].Deuda;
                 }
                 
             }
