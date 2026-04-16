@@ -19,12 +19,13 @@ namespace PryGestionDeClienteLab
 
         private void listadoDeTodosLosClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            frmListadoOrdenado formulario = new frmListadoOrdenado();
+            formulario.Show();
         }
 
         private void agregarNuevosClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form formulario = new Form();
+            Form formulario = new frmGestionClientes();
             formulario.MdiParent=this;
             formulario.Show();
         }

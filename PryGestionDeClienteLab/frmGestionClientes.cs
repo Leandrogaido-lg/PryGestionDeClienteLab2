@@ -142,22 +142,22 @@ namespace PryGestionDeClienteLab
         private void Precarga()
 
         {
-            clsVector.Clientes[IND].Codigo = 10;
-            clsVector.Clientes[IND].Usuario = "Guada";
-            clsVector.Clientes[IND].Deuda = 5000;
-            clsVector.Clientes[IND].Limite = 10000;
+            clsVector.Clientes[clsVector.IND].Codigo = 10;
+            clsVector.Clientes[clsVector.IND].Usuario = "Guada";
+            clsVector.Clientes[clsVector.IND].Deuda = 5000;
+            clsVector.Clientes[clsVector.IND].Limite = 10000;
             clsVector.IND++;
 
-            clsVector.Clientes[IND].Codigo = 20;
-            clsVector.Clientes[IND].Usuario = "marta";
-            clsVector.Clientes[IND].Deuda = 2000;
-            clsVector.Clientes[IND].Limite = 10000;
+            clsVector.Clientes[clsVector.IND].Codigo = 20;
+            clsVector.Clientes[clsVector.IND].Usuario = "marta";
+            clsVector.Clientes[clsVector.IND].Deuda = 2000;
+            clsVector.Clientes[clsVector.IND].Limite = 10000;
             clsVector.IND++;
 
-            clsVector.Clientes[IND].Codigo = 30;
-            clsVector.Clientes[IND].Usuario = "Sofia";
-            clsVector.Clientes[IND].Deuda = 4000;
-            clsVector.Clientes[IND].Limite = 10000;
+            clsVector.Clientes[clsVector.IND].Codigo = 30;
+            clsVector.Clientes[clsVector.IND].Usuario = "Sofia";
+            clsVector.Clientes[clsVector.IND].Deuda = 4000;
+            clsVector.Clientes[clsVector.IND].Limite = 10000;
             clsVector.IND++;
         }
 
