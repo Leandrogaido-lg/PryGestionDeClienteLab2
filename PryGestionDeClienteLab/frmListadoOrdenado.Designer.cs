@@ -51,9 +51,10 @@
             "Nombre",
             "Limite de Credito",
             "Deuda"});
-            this.cbxCampo.Location = new System.Drawing.Point(106, 47);
+            this.cbxCampo.Location = new System.Drawing.Point(141, 58);
+            this.cbxCampo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxCampo.Name = "cbxCampo";
-            this.cbxCampo.Size = new System.Drawing.Size(121, 21);
+            this.cbxCampo.Size = new System.Drawing.Size(160, 24);
             this.cbxCampo.TabIndex = 0;
             // 
             // cbxModo
@@ -62,9 +63,10 @@
             this.cbxModo.Items.AddRange(new object[] {
             "Ascendente",
             "Descendente"});
-            this.cbxModo.Location = new System.Drawing.Point(333, 48);
+            this.cbxModo.Location = new System.Drawing.Point(444, 59);
+            this.cbxModo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.cbxModo.Name = "cbxModo";
-            this.cbxModo.Size = new System.Drawing.Size(121, 21);
+            this.cbxModo.Size = new System.Drawing.Size(160, 24);
             this.cbxModo.TabIndex = 1;
             // 
             // groupBox1
@@ -75,18 +77,21 @@
             this.groupBox1.Controls.Add(this.dgvListado);
             this.groupBox1.Controls.Add(this.cbxCampo);
             this.groupBox1.Controls.Add(this.cbxModo);
-            this.groupBox1.Location = new System.Drawing.Point(12, 12);
+            this.groupBox1.Location = new System.Drawing.Point(16, 15);
+            this.groupBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(489, 354);
+            this.groupBox1.Padding = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.groupBox1.Size = new System.Drawing.Size(652, 436);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consulta de Datos";
             // 
             // btnListar
             // 
-            this.btnListar.Location = new System.Drawing.Point(357, 319);
+            this.btnListar.Location = new System.Drawing.Point(476, 393);
+            this.btnListar.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnListar.Name = "btnListar";
-            this.btnListar.Size = new System.Drawing.Size(97, 29);
+            this.btnListar.Size = new System.Drawing.Size(129, 36);
             this.btnListar.TabIndex = 5;
             this.btnListar.Text = "Listar";
             this.btnListar.UseVisualStyleBackColor = true;
@@ -96,9 +101,10 @@
             // 
             this.lblModo.AutoSize = true;
             this.lblModo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblModo.Location = new System.Drawing.Point(278, 48);
+            this.lblModo.Location = new System.Drawing.Point(371, 59);
+            this.lblModo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblModo.Name = "lblModo";
-            this.lblModo.Size = new System.Drawing.Size(49, 20);
+            this.lblModo.Size = new System.Drawing.Size(62, 25);
             this.lblModo.TabIndex = 4;
             this.lblModo.Text = "Modo";
             // 
@@ -106,9 +112,10 @@
             // 
             this.lblCampo.AutoSize = true;
             this.lblCampo.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
-            this.lblCampo.Location = new System.Drawing.Point(40, 47);
+            this.lblCampo.Location = new System.Drawing.Point(53, 58);
+            this.lblCampo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblCampo.Name = "lblCampo";
-            this.lblCampo.Size = new System.Drawing.Size(60, 20);
+            this.lblCampo.Size = new System.Drawing.Size(76, 25);
             this.lblCampo.TabIndex = 3;
             this.lblCampo.Text = "Campo";
             // 
@@ -120,39 +127,50 @@
             this.Column1,
             this.Column2,
             this.Column3});
-            this.dgvListado.Location = new System.Drawing.Point(23, 99);
+            this.dgvListado.Location = new System.Drawing.Point(31, 122);
+            this.dgvListado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dgvListado.Name = "dgvListado";
-            this.dgvListado.Size = new System.Drawing.Size(431, 204);
+            this.dgvListado.RowHeadersWidth = 51;
+            this.dgvListado.Size = new System.Drawing.Size(575, 251);
             this.dgvListado.TabIndex = 2;
             // 
             // dgvCodigo
             // 
             this.dgvCodigo.HeaderText = "Còdigo";
+            this.dgvCodigo.MinimumWidth = 6;
             this.dgvCodigo.Name = "dgvCodigo";
+            this.dgvCodigo.Width = 125;
             // 
             // Column1
             // 
             this.Column1.HeaderText = "Nombre";
+            this.Column1.MinimumWidth = 6;
             this.Column1.Name = "Column1";
+            this.Column1.Width = 125;
             // 
             // Column2
             // 
             this.Column2.HeaderText = "Limite de Credito";
+            this.Column2.MinimumWidth = 6;
             this.Column2.Name = "Column2";
+            this.Column2.Width = 125;
             // 
             // Column3
             // 
             this.Column3.HeaderText = "Deuda";
+            this.Column3.MinimumWidth = 6;
             this.Column3.Name = "Column3";
+            this.Column3.Width = 125;
             // 
             // frmListadoOrdenado
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(513, 378);
+            this.ClientSize = new System.Drawing.Size(684, 465);
             this.Controls.Add(this.groupBox1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "frmListadoOrdenado";
-            this.Text = "ListadoOrdenado";
+            this.Text = "Listado Ordenado";
             this.Load += new System.EventHandler(this.frmListadoOrdenado_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
