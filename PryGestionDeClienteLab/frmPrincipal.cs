@@ -19,8 +19,7 @@ namespace PryGestionDeClienteLab
 
         private void listadoDeTodosLosClientesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form formulario = new frmGestionClientes();
-            formulario.MdiParent = this;
+            frmListadoOrdenado formulario = new frmListadoOrdenado();
             formulario.Show();
         }
 
@@ -36,20 +35,18 @@ namespace PryGestionDeClienteLab
             formulario.Show();
         }
 
-        private void listadoDeClientesOrdenadosPorToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            frmListadoOrdenado formulario = new frmListadoOrdenado();
-            formulario.Show();
-        }
+        
+        
+            
+        
 
         private void cerrarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        //private void sistemaToolStripMenuItem_Click(object sender, EventArgs e)
+        
 
-
-
-    }
+       
+    }   
 }

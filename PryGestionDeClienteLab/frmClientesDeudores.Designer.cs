@@ -29,28 +29,28 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btnListarDeudores = new System.Windows.Forms.Button();
+            this.lblPromedioDeuda = new System.Windows.Forms.Label();
+            this.lblCantidadClientes = new System.Windows.Forms.Label();
+            this.lblTotalDeuda = new System.Windows.Forms.Label();
             this.dgvClientesDeudores = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.lblTotalDeuda = new System.Windows.Forms.Label();
-            this.lblCantidadClientes = new System.Windows.Forms.Label();
-            this.lblPromedioDeuda = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.btnListarDeudores = new System.Windows.Forms.Button();
+            this.lblTotal1 = new System.Windows.Forms.Label();
+            this.lblCantidad1 = new System.Windows.Forms.Label();
+            this.lblPromedio1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvClientesDeudores)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.lblPromedio1);
+            this.groupBox1.Controls.Add(this.lblCantidad1);
+            this.groupBox1.Controls.Add(this.lblTotal1);
             this.groupBox1.Controls.Add(this.btnListarDeudores);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.lblPromedioDeuda);
             this.groupBox1.Controls.Add(this.lblCantidadClientes);
             this.groupBox1.Controls.Add(this.lblTotalDeuda);
@@ -61,6 +61,43 @@
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Consulta de Datos";
+            // 
+            // btnListarDeudores
+            // 
+            this.btnListarDeudores.Location = new System.Drawing.Point(418, 393);
+            this.btnListarDeudores.Name = "btnListarDeudores";
+            this.btnListarDeudores.Size = new System.Drawing.Size(134, 27);
+            this.btnListarDeudores.TabIndex = 7;
+            this.btnListarDeudores.Text = "Listar Deudores";
+            this.btnListarDeudores.UseVisualStyleBackColor = true;
+            this.btnListarDeudores.Click += new System.EventHandler(this.btnListarDeudores_Click);
+            // 
+            // lblPromedioDeuda
+            // 
+            this.lblPromedioDeuda.AutoSize = true;
+            this.lblPromedioDeuda.Location = new System.Drawing.Point(281, 359);
+            this.lblPromedioDeuda.Name = "lblPromedioDeuda";
+            this.lblPromedioDeuda.Size = new System.Drawing.Size(129, 16);
+            this.lblPromedioDeuda.TabIndex = 3;
+            this.lblPromedioDeuda.Text = "Promedio de Deuda";
+            // 
+            // lblCantidadClientes
+            // 
+            this.lblCantidadClientes.AutoSize = true;
+            this.lblCantidadClientes.Location = new System.Drawing.Point(281, 331);
+            this.lblCantidadClientes.Name = "lblCantidadClientes";
+            this.lblCantidadClientes.Size = new System.Drawing.Size(131, 16);
+            this.lblCantidadClientes.TabIndex = 2;
+            this.lblCantidadClientes.Text = "Cantidad de Clientes";
+            // 
+            // lblTotalDeuda
+            // 
+            this.lblTotalDeuda.AutoSize = true;
+            this.lblTotalDeuda.Location = new System.Drawing.Point(281, 303);
+            this.lblTotalDeuda.Name = "lblTotalDeuda";
+            this.lblTotalDeuda.Size = new System.Drawing.Size(101, 16);
+            this.lblTotalDeuda.TabIndex = 1;
+            this.lblTotalDeuda.Text = "Total de Deuda";
             // 
             // dgvClientesDeudores
             // 
@@ -105,62 +142,29 @@
             this.Column4.Name = "Column4";
             this.Column4.Width = 125;
             // 
-            // lblTotalDeuda
+            // lblTotal1
             // 
-            this.lblTotalDeuda.AutoSize = true;
-            this.lblTotalDeuda.Location = new System.Drawing.Point(281, 303);
-            this.lblTotalDeuda.Name = "lblTotalDeuda";
-            this.lblTotalDeuda.Size = new System.Drawing.Size(101, 16);
-            this.lblTotalDeuda.TabIndex = 1;
-            this.lblTotalDeuda.Text = "Total de Deuda";
+            this.lblTotal1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblTotal1.Location = new System.Drawing.Point(451, 302);
+            this.lblTotal1.Name = "lblTotal1";
+            this.lblTotal1.Size = new System.Drawing.Size(100, 23);
+            this.lblTotal1.TabIndex = 8;
             // 
-            // lblCantidadClientes
+            // lblCantidad1
             // 
-            this.lblCantidadClientes.AutoSize = true;
-            this.lblCantidadClientes.Location = new System.Drawing.Point(281, 331);
-            this.lblCantidadClientes.Name = "lblCantidadClientes";
-            this.lblCantidadClientes.Size = new System.Drawing.Size(131, 16);
-            this.lblCantidadClientes.TabIndex = 2;
-            this.lblCantidadClientes.Text = "Cantidad de Clientes";
+            this.lblCantidad1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblCantidad1.Location = new System.Drawing.Point(448, 324);
+            this.lblCantidad1.Name = "lblCantidad1";
+            this.lblCantidad1.Size = new System.Drawing.Size(100, 23);
+            this.lblCantidad1.TabIndex = 9;
             // 
-            // lblPromedioDeuda
+            // lblPromedio1
             // 
-            this.lblPromedioDeuda.AutoSize = true;
-            this.lblPromedioDeuda.Location = new System.Drawing.Point(281, 359);
-            this.lblPromedioDeuda.Name = "lblPromedioDeuda";
-            this.lblPromedioDeuda.Size = new System.Drawing.Size(129, 16);
-            this.lblPromedioDeuda.TabIndex = 3;
-            this.lblPromedioDeuda.Text = "Promedio de Deuda";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(418, 297);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(134, 22);
-            this.textBox1.TabIndex = 4;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(418, 325);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(134, 22);
-            this.textBox2.TabIndex = 5;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(418, 353);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(134, 22);
-            this.textBox3.TabIndex = 6;
-            // 
-            // btnListarDeudores
-            // 
-            this.btnListarDeudores.Location = new System.Drawing.Point(418, 393);
-            this.btnListarDeudores.Name = "btnListarDeudores";
-            this.btnListarDeudores.Size = new System.Drawing.Size(134, 27);
-            this.btnListarDeudores.TabIndex = 7;
-            this.btnListarDeudores.Text = "Listar Deudores";
-            this.btnListarDeudores.UseVisualStyleBackColor = true;
+            this.lblPromedio1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.lblPromedio1.Location = new System.Drawing.Point(448, 352);
+            this.lblPromedio1.Name = "lblPromedio1";
+            this.lblPromedio1.Size = new System.Drawing.Size(100, 23);
+            this.lblPromedio1.TabIndex = 10;
             // 
             // frmClientesDeudores
             // 
@@ -182,9 +186,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvClientesDeudores;
         private System.Windows.Forms.Button btnListarDeudores;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblPromedioDeuda;
         private System.Windows.Forms.Label lblCantidadClientes;
         private System.Windows.Forms.Label lblTotalDeuda;
@@ -192,5 +193,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.Label lblPromedio1;
+        private System.Windows.Forms.Label lblCantidad1;
+        private System.Windows.Forms.Label lblTotal1;
     }
 }

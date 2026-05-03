@@ -23,28 +23,28 @@ namespace PryGestionDeClienteLab
         static public void CargaDatosPrueba()    
 
         {
-            Clientes[IND].Codigo = 10;
-            Clientes[IND].Usuario = "Guada";
-            Clientes[IND].Deuda = 5000;
-            Clientes[IND].Limite = 10000;
-            IND++;
+            clsVector.Clientes[IND].Codigo = 10;
+            clsVector.Clientes[IND].Usuario = "Guada";
+            clsVector.Clientes[IND].Deuda = 5000;
+            clsVector.Clientes[IND].Limite = 10000;
+            clsVector.IND++;
 
-            Clientes[IND].Codigo = 20;
-            Clientes[IND].Usuario = "marta";
-            Clientes[IND].Deuda = 2000;
-            Clientes[IND].Limite = 10000;
-            IND++;
+            clsVector.Clientes[IND].Codigo = 20;
+            clsVector.Clientes[IND].Usuario = "marta";
+            clsVector.Clientes[IND].Deuda = 2000;
+            clsVector.Clientes[IND].Limite = 10000;
+            clsVector.IND++;
 
-            Clientes[IND].Codigo = 30;
-            Clientes[IND].Usuario = "Sofia";
-            Clientes[IND].Deuda = 4000;
-            Clientes[IND].Limite = 10000;
-            IND++;
-            Clientes[IND].Codigo = 5;
-            Clientes[IND].Usuario = "Maria";
-            Clientes[IND].Deuda = 7000;
-            Clientes[IND].Limite = 100000;
-            IND++;
+            clsVector.Clientes[IND].Codigo = 30;
+            clsVector.Clientes[IND].Usuario = "Sofia";
+            clsVector.Clientes[IND].Deuda = 4000;
+            clsVector.Clientes[IND].Limite = 10000;
+            clsVector.IND++;
+            clsVector.Clientes[IND].Codigo = 5;
+            clsVector.Clientes[IND].Usuario = "Maria";
+            clsVector.Clientes[IND].Deuda = 7000;
+            clsVector.Clientes[IND].Limite = 100000;
+            clsVector.IND++;
         }
 
         static public RegCli[] Clientes = new RegCli[10];
@@ -267,5 +267,6 @@ namespace PryGestionDeClienteLab
                 c++;
             }
         }
+
     }
 }
